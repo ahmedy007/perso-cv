@@ -1,66 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon CV</title>
+    <meta name="description" content="Consultez le CV d'Ahmed Yessin Chouria.">
+    <meta name="author" content="Ahmed Yessin Chouria">
+    <title>Mon CV | Ahmed Yessin Chouria</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Curriculum Viteae</h1>
+    <header class="site-header">
+        <div class="identity">
+            <img src="images/image.jpg" alt="Portrait d'Ahmed Yessin Chouria" width="62" height="62">
+            <div>
+                <p class="identity-name">Ahmed Yessin Chouria</p>
+                <a class="identity-email" href="mailto:ahmedyassinechouria@gmail.com">ahmedyassinechouria@gmail.com</a>
+            </div>
+        </div>
+        <nav class="site-nav" aria-label="Navigation principale">
+            <a href="index.html">Accueil</a>
+            <a href="cv.html" aria-current="page">Mon CV</a>
+            <a href="mail.html">Contact</a>
+            <a href="quiz.html">Quiz HTML &amp; CSS</a>
+        </nav>
     </header>
-    <article class="cv">
-        <ul>
-            <li>
-                <h3>etat civil</h3>
-                <ul type="disk">
-                    <li>Nom: Ahmed yessin</li>
-                    <li>Prénom: CHOURIA</li>
-                    <li>Date et lieu de naissance: 8/12/2007 Bizerte</li>
-                    <li>Nationalité: Tunisien</li>
+
+    <main class="page-shell">
+        <section class="page-intro">
+            <p class="eyebrow">Parcours</p>
+            <h1>Mon CV</h1>
+            <p class="lead">Quelques informations sur mon parcours et mes expériences.</p>
+        </section>
+
+        <div class="cv-grid">
+            <section class="card cv-card" aria-labelledby="personal-title">
+                <h2 id="personal-title">État civil</h2>
+                <ul class="detail-list">
+                    <li>Nom : Ahmed Yessin</li>
+                    <li>Prénom : Chouria</li>
+                    <li>Date et lieu de naissance : 8/12/2007, Bizerte</li>
+                    <li>Nationalité : Tunisienne</li>
                 </ul>
-            </li>
-            <hr>
-            <li>
-                <h3>Diplomes</h3>
-                <ul type="circle">
+            </section>
+
+            <section class="card cv-card" aria-labelledby="diplomas-title">
+                <h2 id="diplomas-title">Diplômes</h2>
+                <ul class="date-list" aria-label="Années indiquées">
                     <li>2004</li>
                     <li>2002</li>
                     <li>2003</li>
                 </ul>
-            </li>
-            <hr>
-            <li>
-                <h3>Stages</h3>
-                <ul type="cirle">
+            </section>
+
+            <section class="card cv-card cv-card--wide" aria-labelledby="stages-title">
+                <h2 id="stages-title">Stages</h2>
+                <ul class="stage-list">
                     <li>
-                        <p>2004</p>
-                        <ol type="1">
-                            <li>stage 1</li>
-                            <li>stage 2</li>
+                        <h3>2004</h3>
+                        <ol>
+                            <li>Stage 1</li>
+                            <li>Stage 2</li>
                         </ol>
                     </li>
                     <li>
-                        <p>2002</p>
-                        <ol type="1">
-                            <li>stage 1</li>
-                            <li>stage 2</li>
+                        <h3>2002</h3>
+                        <ol>
+                            <li>Stage 1</li>
+                            <li>Stage 2</li>
                         </ol>
                     </li>
                 </ul>
-            </li>
-        </ul>
-    </article>
-    <footer>
-        <table>
-            <tr>
-                <td>
-                    <a href="index.html">Acceuil</a>
-                </td>
-            </tr>
-        </table>
+            </section>
+        </div>
+    </main>
 
+    <footer class="site-footer">
+        <p>&copy; 2026 Ahmed Yessin Chouria · <a href="index.html">Retour à l'accueil</a></p>
     </footer>
 </body>
 </html>

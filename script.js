@@ -1,69 +1,42 @@
-function verifier(){
-    var s=0;
-    msg="Resultat: "
-    if(document.getElementById("Q12").checked && !(document.getElementById("Q11").checked) && !(document.getElementById("Q13").checked)){
-        s=s+10;
-        msg=msg+"Question1: bonne reponse ";
-    }else{
-        msg=msg+"Question1: fausse reponse ";     
-    }
+const quizForm = document.querySelector("#quiz-form");
 
-    if(document.getElementById("Q22").checked && document.getElementById("Q23").checked && !(document.getElementById("Q21").checked)){
-        s=s+10;
-        msg=msg+"Question2: bonne reponse ";
-    }else{
-        msg=msg+"Question2: fausse reponse ";     
-    }
-    if(document.getElementById("Q31").checked && !(document.getElementById("Q32").checked) && !(document.getElementById("Q33").checked)){
-        s=s+10;
-        msg=msg+"Question3: bonne reponse ";
-    }else{
-        msg=msg+"Question3: fausse reponse ";     
-    }
-    if(document.getElementById("Q41").checked && !(document.getElementById("Q42").checked) && !(document.getElementById("Q43").checked) && !(document.getElementById("Q44").checked)){
-        s=s+10;
-        msg=msg+"Question4: bonne reponse ";
-    }else{
-        msg=msg+"Question4: fausse reponse ";     
-    }
-    if(document.getElementById("Q51").checked){
-        s=s+10;
-        msg=msg+"Question5: bonne reponse ";
-    }else{
-        msg=msg+"Question5: fausse reponse ";     
-    }
-    if(document.getElementById("Q61").checked && !(document.getElementById("Q62").checked) && !(document.getElementById("Q63").checked) && document.getElementById("Q64").checked){
-        s=s+10;
-        msg=msg+"Question6: bonne reponse ";
-    }else{
-        msg=msg+"Question6: fausse reponse ";     
-    }
-    if(document.getElementById("Q71").checked){
-        s=s+10;
-        msg=msg+"Question7: bonne reponse ";
-    }else{
-        msg=msg+"Question7: fausse reponse ";     
-    }
-    if(!(document.getElementById("Q81").checked) && !(document.getElementById("Q82").checked) && document.getElementById("Q83").checked && !(document.getElementById("Q84").checked)){
-        s=s+10;
-        msg=msg+"Question8: bonne reponse ";
-    }else{
-        msg=msg+"Question8: fausse reponse ";     
-    }
-    if(document.getElementById("Q92").checked){
-        s=s+10;
-        msg=msg+"Question9: bonne reponse ";
-    }else{
-        msg=msg+"Question9: fausse reponse ";     
-    }
-    if(document.getElementById("Q101").checked && document.getElementById("Q103").checked && !(document.getElementById("Q102").checked)){
-        s=s+10;
-        msg=msg+"Question10: bonne reponse ";
-    }else{
-        msg=msg+"Question10: fausse reponse  ";     
-    }
+if (quizForm) {
+    quizForm.addEventListener("submit", (event) => {
+        event.preventDefault();
 
-msg=msg+" pts: ";
-msg=msg+s;
-alert(msg)
+        const questions = [...quizForm.querySelectorAll(".question")];
+        const score = questions.reduce((total, question) => {
+            const correctAnswers = [...question.querySelectorAll("input[data-correct]")];
+            const selectedAnswers = [...question.querySelectorAll("input:checked")];
+            const isCorrect = correctAnswers.length === selectedAnswers.length
+                && correctAnswers.every((answer) => answer.checked);
+
+            return total + Number(isCorrect);
+        }, 0);
+
+        const result = document.querySelector("#quiz-result");
+        result.textContent = `Résultat : ${score}/${questions.length} points. ${
+            score === questions.length ? "Excellent, toutes les réponses sont correctes !" : "Vous pouvez modifier vos réponses et réessayer."
+        }`;
+        result.classList.add("is-visible");
+    });
+}
+
+const contactForm = document.querySelector("#contact-form");
+
+if (contactForm) {
+    contactForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(contactForm);
+        const name = formData.get("name").toString().trim();
+        const email = formData.get("email").toString().trim();
+        const subject = formData.get("subject").toString().trim();
+        const message = formData.get("message").toString().trim();
+        const body = `Nom : ${name}\nE-mail : ${email}\n\n${message}`;
+        const mailto = `mailto:ahmedyassinechouria@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+        document.querySelector("#contact-status").textContent = "Votre application de messagerie va s'ouvrir pour envoyer le message.";
+        window.location.href = mailto;
+    });
 }

@@ -1,0 +1,3 @@
+as a student in college ,i wanna make a personal website to add it to my protfolio, so i wanna improuve this website and make it look better (html , css , js only)
+
+Improve my existing personal portfolio website using only HTML, CSS, and JavaScript. Keep the existing pages, make the design modern and responsive, and fix broken links and usability issues. Please edit the project files and test the changes.

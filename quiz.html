@@ -3,137 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Author" content="Ahmed yessin CHOURIA">
-    <meta name="Keywords" content="cv,site,personnelle,interets,fsb">
-    <meta name="description" content="un bon cv pour Mr Ahmed yessin">
-    <title>Mon cv</title>
+    <meta name="description" content="Testez vos connaissances de base en HTML et CSS avec ce quiz de dix questions.">
+    <meta name="author" content="Ahmed Yessin Chouria">
+    <title>Quiz HTML &amp; CSS | Ahmed Yessin Chouria</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <div id="tab">
-            <img src="./images/image.jpg" width="68px">
-            <div id="hd">
-                <p>Ahmed yessin CHOURIA</p>
-                <a href="mailto:ahmedyassinechouria@gmail.com">ahmedyassinechouria@gmail.com</a>
+    <header class="site-header">
+        <div class="identity">
+            <img src="images/image.jpg" alt="Portrait d'Ahmed Yessin Chouria" width="62" height="62">
+            <div>
+                <p class="identity-name">Ahmed Yessin Chouria</p>
+                <a class="identity-email" href="mailto:ahmedyassinechouria@gmail.com">ahmedyassinechouria@gmail.com</a>
             </div>
         </div>
-        <h1>Bienvenu sur ma page personelle</h1>
-    </header>
-    <div id="content">
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html">Acceuil</a>
-                </li>
-                <li>
-                    <a href="cv.html">Mon CV</a>
-                </li>
-                <li>
-                    <a href="">Mes Fichiers</a>
-                </li>
-                <li>
-                    <a href="">Mes projets</a>
-                </li>
-                <li>
-                    <a href="quiz.html">Quiz</a>
-                </li>
-            </ul>
+        <nav class="site-nav" aria-label="Navigation principale">
+            <a href="index.html">Accueil</a>
+            <a href="cv.html">Mon CV</a>
+            <a href="mail.html">Contact</a>
+            <a href="quiz.html" aria-current="page">Quiz HTML &amp; CSS</a>
         </nav>
-        <main>
-            <h2>Mon Quiz:Une ou plusieurs réponses sont possibles sleon la question</h2>
-            <form action="">
-                <p>
-                    <h3>Question 1: Que signifie HTML?</h3>
-                    <p>
-                        <input type="radio" name="1" id="Q11">hyper Technology mixed language <br>
-                        <input type="radio" name="1" id="Q12">hyper text markup language <br>
-                        <input type="radio" name="1" id="Q13">hyper Text Mapping language <br>
-                    </p>
-                </p>
-                <p>
-                    <h3>Question 2: Quel est ou quels sont les schémas HTML correct?</h3>
-                    <p> 
-                        <input type="checkbox" name="" id="Q21"> < html >< body > < head > < /head > < /body > </ html > <br>
-                        <input type="checkbox" name="" id="Q22"> < html >< head > < /head > < body > < /body > </ html > <br>
-                        <input type="checkbox" name="" id="Q23"> < html >< body >< /body > </ html > <br>
-                    </p>
-                </p>
-                <p>
-                    <h3>Question 3:Quel est le tag à utiliser pour placer une image?</h3>
-                    <p>
-                        <input type="radio" name="2" id="Q31"> < img src="" alt="" > <br>
-                        <input type="radio" name="2" id="Q32"> < img srourc="" alt="" > <br>
-                        <input type="radio" name="2" id="Q33"> < img href="" alt="" > <br>
-                    </p>
-                </p>
-                <p>
-                    <h3>Question 4: Comment définir un commentaire en CSS?</h3>
-                    <p>
-                        <input type="checkbox" name="" id="Q41"> < !--ceci est un commentaire-- > <br>
-                        <input type="checkbox" name="" id="Q42">/*Ceci est un commentaire"/ <br>
-                        <input type="checkbox" name="" id="Q43">/*/*Ceci est un commentaire"/ <br>
-                        <input type="checkbox" name="" id="Q44"> //ceci un commentaire <br>
-                    </p>
-                </p>
-                <p>
-                    <h3>Question 5: Quelle est la règle de style qui permet de définir la couleur d'arrière-plan d'un élément HTML?</h3>
-                    <p>
-                        <input type="radio" name="3" id="Q51"> background-color <br>
-                        <input type="radio" name="3" id="Q52"> color <br>
-                        <input type="radio" name="3" id="Q53"> bgcolor <br>
-                    </p>
-                </p>
-                <p>
-                    <h3>Question 6: Lesquelles parmi ces balises sont des balises de définition des tableaux?</h3>
-                    <p>
-                        <input type="checkbox" name="" id="Q61">< table >< tr >< td > <br>
-                        <input type="checkbox" name="" id="Q62">< table > < head > < tfoot > <br>
-                        <input type="checkbox" name="" id="Q63">< table >< tr >< tt > <br>
-                        <input type="checkbox" name="" id="Q64">< table >< tr >< th > <br>
-                    </p>
-                </p>
-                <p>
-                    <h3>Question 7:Quelle est la couleur représentée par #FFFFFF?</h3>
-                    <p>
-                        <input type="radio" name="4" id="Q71">blanc <br>
-                        <input type="radio" name="4" id="Q72">noir <br>
-                    </p>
-                </p>
-                <p>
-                    <h3>Question 8: Quelles balises permettent de mettre du texte en italique?</h3>
-                    <p>
-                        <input type="checkbox" name="" id="Q81"> < bold >< /bold > <br>
-                        <input type="checkbox" name="" id="Q82"> < em >< /em > <br>
-                        <input type="checkbox" name="" id="Q83"> < i >< /i > <br>
-                        <input type="checkbox" name="" id="Q84"> < g >< /g > <br>
-                    </p>
-                </p>
-                <p>
-                    <h3>Question 9: Quel est le rôle de la balise < TITLE >?</h3>
-                    <p>
-                        <input type="radio" name="5" id="Q91">centrer un titre <br>
-                        <input type="radio" name="5" id="Q92">définir le titre du document <br>
-                        <input type="radio" name="5" id="Q93">écrire un titre en grand <br>
-                    </p>
-                </p>
-                <p>
-                    <h3>Question 10: Où peut-on placer le code CSS?</h3>
-                    <p>
-                        <input type="checkbox" name="" id="Q101">Dans le < body > <br>
-                        <input type="checkbox" name="" id="Q102">dans la balise < head > <br>
-                        <input type="checkbox" name="" id="Q103">Dans un fichier externe utilisable pour plusieurs pages <br>
-                    </p>
-                </p>
-                <input type="submit" value="verifier" onClick="verifier()">
-            </form>
-        </main>
-    </div>
-    <footer>
-        <p>A venir</p>
-        <hr>
-        <p>Privacy: &copy; 2026 FSB-Departement Informatique</p>
+    </header>
+
+    <main class="page-shell">
+        <section class="page-intro">
+            <p class="eyebrow">À vous de jouer</p>
+            <h1>Quiz HTML &amp; CSS</h1>
+            <p class="lead">Dix questions pour tester vos bases. Une ou plusieurs réponses peuvent être correctes selon la question.</p>
+        </section>
+
+        <form class="quiz-form" id="quiz-form">
+            <fieldset class="question">
+                <legend>1. Que signifie HTML ?</legend>
+                <label class="question-option"><input type="radio" name="q1" value="a"> Hyper Technology Mixed Language</label>
+                <label class="question-option"><input type="radio" name="q1" value="b" data-correct> HyperText Markup Language</label>
+                <label class="question-option"><input type="radio" name="q1" value="c"> HyperText Mapping Language</label>
+            </fieldset>
+
+            <fieldset class="question">
+                <legend>2. Quels exemples montrent une structure HTML correcte ?</legend>
+                <label class="question-option"><input type="checkbox" name="q2" value="a"> <code>&lt;!doctype html&gt;&lt;html&gt;&lt;body&gt;&lt;head&gt;&lt;/head&gt;&lt;/body&gt;&lt;/html&gt;</code></label>
+                <label class="question-option"><input type="checkbox" name="q2" value="b" data-correct> <code>&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;</code></label>
+                <label class="question-option"><input type="checkbox" name="q2" value="c" data-correct> <code>&lt;!doctype html&gt;&lt;html&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;</code></label>
+            </fieldset>
+
+            <fieldset class="question">
+                <legend>3. Quel élément HTML permet d'afficher une image ?</legend>
+                <label class="question-option"><input type="radio" name="q3" value="a" data-correct> <code>&lt;img src="" alt=""&gt;</code></label>
+                <label class="question-option"><input type="radio" name="q3" value="b"> <code>&lt;img srourc="" alt=""&gt;</code></label>
+                <label class="question-option"><input type="radio" name="q3" value="c"> <code>&lt;img href="" alt=""&gt;</code></label>
+            </fieldset>
+
+            <fieldset class="question">
+                <legend>4. Comment écrire un commentaire en CSS ?</legend>
+                <label class="question-option"><input type="radio" name="q4" value="a"> <code>&lt;!-- un commentaire --&gt;</code></label>
+                <label class="question-option"><input type="radio" name="q4" value="b" data-correct> <code>/* un commentaire */</code></label>
+                <label class="question-option"><input type="radio" name="q4" value="c"> <code>// un commentaire</code></label>
+            </fieldset>
+
+            <fieldset class="question">
+                <legend>5. Quelle propriété CSS définit la couleur d'arrière-plan ?</legend>
+                <label class="question-option"><input type="radio" name="q5" value="a" data-correct> <code>background-color</code></label>
+                <label class="question-option"><input type="radio" name="q5" value="b"> <code>color</code></label>
+                <label class="question-option"><input type="radio" name="q5" value="c"> <code>bgcolor</code></label>
+            </fieldset>
+
+            <fieldset class="question">
+                <legend>6. Quelles associations d'éléments HTML servent à construire un tableau ?</legend>
+                <label class="question-option"><input type="checkbox" name="q6" value="a" data-correct> <code>&lt;table&gt;&lt;tr&gt;&lt;td&gt;</code></label>
+                <label class="question-option"><input type="checkbox" name="q6" value="b"> <code>&lt;table&gt;&lt;head&gt;&lt;tfoot&gt;</code></label>
+                <label class="question-option"><input type="checkbox" name="q6" value="c"> <code>&lt;table&gt;&lt;tr&gt;&lt;tt&gt;</code></label>
+                <label class="question-option"><input type="checkbox" name="q6" value="d" data-correct> <code>&lt;table&gt;&lt;tr&gt;&lt;th&gt;</code></label>
+            </fieldset>
+
+            <fieldset class="question">
+                <legend>7. Quelle couleur représente le code hexadécimal <code>#FFFFFF</code> ?</legend>
+                <label class="question-option"><input type="radio" name="q7" value="a" data-correct> Blanc</label>
+                <label class="question-option"><input type="radio" name="q7" value="b"> Noir</label>
+            </fieldset>
+
+            <fieldset class="question">
+                <legend>8. Quels éléments HTML peuvent mettre du texte en italique ?</legend>
+                <label class="question-option"><input type="checkbox" name="q8" value="a"> <code>&lt;bold&gt;&lt;/bold&gt;</code></label>
+                <label class="question-option"><input type="checkbox" name="q8" value="b" data-correct> <code>&lt;em&gt;&lt;/em&gt;</code></label>
+                <label class="question-option"><input type="checkbox" name="q8" value="c" data-correct> <code>&lt;i&gt;&lt;/i&gt;</code></label>
+                <label class="question-option"><input type="checkbox" name="q8" value="d"> <code>&lt;g&gt;&lt;/g&gt;</code></label>
+            </fieldset>
+
+            <fieldset class="question">
+                <legend>9. Quel est le rôle de l'élément <code>&lt;title&gt;</code> ?</legend>
+                <label class="question-option"><input type="radio" name="q9" value="a"> Centrer un titre</label>
+                <label class="question-option"><input type="radio" name="q9" value="b" data-correct> Définir le titre du document</label>
+                <label class="question-option"><input type="radio" name="q9" value="c"> Écrire un titre en grand dans la page</label>
+            </fieldset>
+
+            <fieldset class="question">
+                <legend>10. Où peut-on écrire du CSS ?</legend>
+                <label class="question-option"><input type="checkbox" name="q10" value="a" data-correct> Dans un attribut <code>style</code> sur un élément HTML</label>
+                <label class="question-option"><input type="checkbox" name="q10" value="b" data-correct> Dans un élément <code>&lt;style&gt;</code> du document</label>
+                <label class="question-option"><input type="checkbox" name="q10" value="c" data-correct> Dans un fichier externe réutilisable</label>
+            </fieldset>
+
+            <div class="quiz-actions">
+                <button class="button" type="submit">Vérifier mes réponses</button>
+                <p class="form-note">Chaque question vaut 1 point.</p>
+            </div>
+            <p class="quiz-result" id="quiz-result" role="status" aria-live="polite"></p>
+        </form>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Ahmed Yessin Chouria · <a href="index.html">Retour à l'accueil</a></p>
     </footer>
 </body>
 </html>

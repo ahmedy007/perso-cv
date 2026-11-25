@@ -3,73 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Author" content="Ahmed yessin CHOURIA">
-    <meta name="Keywords" content="cv,site,personnelle,interets,fsb">
-    <meta name="description" content="un bon cv pour Mr Ahmed yessin">
-    <title>Mon cv</title>
+    <meta name="description" content="Contactez Ahmed Yessin Chouria par e-mail.">
+    <meta name="author" content="Ahmed Yessin Chouria">
+    <title>Contact | Ahmed Yessin Chouria</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <div id="tab">
-            <img src="./images/image.jpg" width="68px">
-            <div id="hd">
-                <p>Ahmed yessin CHOURIA</p>
-                <a href="mailto:ahmedyassinechouria@gmail.com">ahmedyassinechouria@gmail.com</a>
+    <header class="site-header">
+        <div class="identity">
+            <img src="images/image.jpg" alt="Portrait d'Ahmed Yessin Chouria" width="62" height="62">
+            <div>
+                <p class="identity-name">Ahmed Yessin Chouria</p>
+                <a class="identity-email" href="mailto:ahmedyassinechouria@gmail.com">ahmedyassinechouria@gmail.com</a>
             </div>
         </div>
-        <h1>Bienvenu sur ma page personelle</h1>
-    </header>
-    <div id="content">
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html">Acceuil</a>
-                </li>
-                <li>
-                    <a href="cv.html">Mon CV</a>
-                </li>
-                <li>
-                    <a href="">Mes Fichiers</a>
-                </li>
-                <li>
-                    <a href="">Mes projets</a>
-                </li>
-                <li>
-                    <a href="quiz.html">Quiz</a>
-                </li>
-
-            </ul>
+        <nav class="site-nav" aria-label="Navigation principale">
+            <a href="index.html">Accueil</a>
+            <a href="cv.html">Mon CV</a>
+            <a href="mail.html" aria-current="page">Contact</a>
+            <a href="quiz.html">Quiz HTML &amp; CSS</a>
         </nav>
-        <main>
-            <form action="">
-                <h2>M'envoyer un email</h2>
-                <table>
-                 <tr>
-                    <td>Votre nom</td>
-                    <td><input type="text" name="" id=""></td>
-                </tr>
-                <tr>
-                    <td>votre email</td>
-                    <td><input type="email" name="" id=""></td>
-                </tr>
-                <tr>
-                    <td>Objet</td>
-                    <td><input type="text"></td>
-                </tr>
-                <tr>
-                    <td>Message</td>
-                    <td><textarea name="" id=""></textarea></td>
-                </tr>
-                </table>
+    </header>
 
+    <main class="page-shell">
+        <section class="page-intro">
+            <p class="eyebrow">Restons en contact</p>
+            <h1>M'envoyer un message</h1>
+            <p class="lead">Remplissez les champs ci-dessous. Votre application de messagerie s'ouvrira avec le message préparé.</p>
+        </section>
+
+        <section class="card" aria-labelledby="contact-form-title">
+            <h2 id="contact-form-title">Votre message</h2>
+            <form class="contact-form" id="contact-form">
+                <div class="form-field">
+                    <label for="sender-name">Votre nom</label>
+                    <input type="text" id="sender-name" name="name" autocomplete="name" required>
+                </div>
+                <div class="form-field">
+                    <label for="sender-email">Votre adresse e-mail</label>
+                    <input type="email" id="sender-email" name="email" autocomplete="email" required>
+                </div>
+                <div class="form-field">
+                    <label for="message-subject">Objet</label>
+                    <input type="text" id="message-subject" name="subject" required>
+                </div>
+                <div class="form-field">
+                    <label for="message-body">Message</label>
+                    <textarea id="message-body" name="message" rows="6" required></textarea>
+                </div>
+                <button class="button" type="submit">Préparer l'e-mail</button>
+                <p class="form-note">Ce formulaire ne transmet pas les données à un serveur. Il prépare un e-mail dans votre application de messagerie.</p>
+                <p class="form-status" id="contact-status" role="status" aria-live="polite"></p>
             </form>
-        </main>
-    </div>
-    <footer>
-        <p>A venir</p>
-        <hr>
-        <p>Privacy: &copy; 2026 FSB-Departement Informatique</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Ahmed Yessin Chouria · <a href="index.html">Retour à l'accueil</a></p>
     </footer>
 </body>
 </html>
